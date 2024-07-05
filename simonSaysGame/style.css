@@ -1,0 +1,33 @@
+body{
+    text-align: center;
+}
+.table{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.btn{
+    height: 150px;
+    width: 150px;
+    border-radius: 20%;
+    border: 10px solid black;
+    margin: 20px;
+}
+.red{
+    background-color:#f71111;
+}
+.green{
+    background-color: #02bd11;
+}
+.orange{
+    background-color: #fc5603;
+}
+.blue{
+    background-color: #057bfa;
+}
+.flash{
+    background-color: white;
+}
+.alert{
+    background-color: red;
+}
