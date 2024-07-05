@@ -25,10 +25,15 @@ function levelUp(){
     let randBtn = document.querySelector(`.${randColor}`);
     gameSeq.push(randColor);
     setTimeout(function(){
-    btnFlash(randBtn);
+    compFlash(randBtn);
     },500);
 }
-
+function compFlash(randBtn){
+    randBtn.classList.add("black");
+    setTimeout(function () {
+        randBtn.classList.remove("black")
+    },400);
+}
 function btnFlash(btn){
     btn.classList.add("flash");
     setTimeout(function () {
