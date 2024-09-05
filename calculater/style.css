@@ -1,7 +1,8 @@
-body{
-    background-color:black;
+body {
+    background-color: black;
 }
-.calc{
+
+.calc {
     border: 0.1rem solid black;
     position: absolute;
     align-items: center;
@@ -15,9 +16,10 @@ body{
     border-radius: 20px;
     background: #1e1e1e;
     box-shadow: 15px 15px 30px rgb(60, 60, 60),
-                -15px -15px 30px rgb(60, 60, 60);
+        -15px -15px 30px rgb(60, 60, 60);
 }
-.screen{
+
+.screen {
     position: absolute;
     top: 1rem;
     left: 1rem;
@@ -27,7 +29,8 @@ body{
     border-radius: 5px 5px 5px 5px;
     color: aliceblue;
 }
-.inp{
+
+.inp {
     height: 25rem;
     width: 23.7rem;
     background-color: #2a2a2a;
@@ -35,12 +38,13 @@ body{
     bottom: 0;
     display: grid;
     border-radius: 0 0 20px 20px;
-    grid-template-rows: repeat(5,1fr);
-    grid-template-columns: repeat(4,1fr);
-    grid-gap:10px 10px;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px 10px;
     padding: 10px 10px 10px 10px;
 }
-.btn{
+
+.btn {
     /* border: 0.01rem solid black; */
     font-family: "Roboto", sans-serif;
     font-size: 1.2rem;
@@ -50,32 +54,35 @@ body{
     width: 0.6rem;
     border-radius: 50%;
     background: linear-gradient(145deg, #252525, #2c2c2c);
-    box-shadow:  10px 10px 20px #1e1e1e,
-                 -5px 0px 20px #4e4e4e;
+    box-shadow: 10px 10px 20px #1e1e1e,
+        -5px 0px 20px #4e4e4e;
     padding: 30px;
     cursor: pointer;
     transition: all 0.2s ease;
 }
-.btn i{
+
+.btn i {
     position: relative;
     top: -5px;
 }
 
-.btn:hover{
+.btn:hover {
     position: relative;
     left: -1px;
     bottom: 1px;
-    box-shadow:  15px 15px 20px #1e1e1e,
-                 -5px 0px 20px #3e3e3e;
+    box-shadow: 15px 15px 20px #1e1e1e,
+        -5px 0px 20px #3e3e3e;
 }
-.btn:active{
+
+.btn:active {
     position: relative;
     left: 0px;
     top: 0px;
-    box-shadow:  0px 0px 0px #1e1e1e,
-                 -5px 0px 20px #3e3e3e;
+    box-shadow: 0px 0px 0px #1e1e1e,
+        -5px 0px 20px #3e3e3e;
 }
-.equal{
+
+.equal {
     margin-top: 0.5em;
     grid-column: 3 / span 2;
     height: 0rem;
@@ -84,26 +91,32 @@ body{
     background: orange;
     color: #1e1e1e;
     padding-top: 25px;
-    box-shadow:  15px 15px 20px #1e1e1e,
-                 -10px 0px 20px #4e4e4e;
+    box-shadow: 15px 15px 20px #1e1e1e,
+        -10px 0px 20px #4e4e4e;
 }
-.num{
+
+.num {
     color: white;
 }
-.ac,.del{
+
+.ac,
+.del {
     color: rgb(150, 149, 149);
 }
-.op{
+
+.op {
     color: greenyellow;
 }
-.user-inp{
+
+.user-inp {
     height: 50%;
     width: 100%;
     text-align: right;
 }
-.user-inp p{
-        font-family: "Roboto", sans-serif;
-        font-weight: 800;
-        font-style: normal;
-        font-size: 1.8rem;
+
+.user-inp p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1.8rem;
 }
