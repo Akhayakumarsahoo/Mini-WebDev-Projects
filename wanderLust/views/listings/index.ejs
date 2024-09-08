@@ -1,5 +1,68 @@
 <% layout("layouts/boilerplate") %>
-<div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-2 row-cols-1">
+<link rel="stylesheet" href="/css/filter.css" />
+<div class="filters">
+  <div class="filter">
+    <i class="fa-solid fa-person-swimming"></i>
+    <p>Amazing pools</p>
+    <div class="line"></div>
+  </div>
+  <div class="filter">
+    <i class="fa-solid fa-tractor"></i>
+    <p>Farms</p>
+    <div class="line"></div>
+  </div>
+  <div class="filter">
+    <i class="fa-solid fa-umbrella-beach"></i>
+    <p>Beachfront</p>
+    <div class="line"></div>
+  </div>
+  <div class="filter">
+    <i class="fa-solid fa-fire"></i>
+    <p>Trending</p>
+    <div class="line"></div>
+  </div>
+  <div class="filter">
+    <i class="fa-solid fa-bed"></i>
+    <p>Rooms</p>
+    <div class="line"></div>
+  </div>
+  <div class="filter">
+    <i class="fa-solid fa-sailboat"></i>
+    <p>Houseboats</p>
+    <div class="line"></div>
+  </div>
+  <div class="filter">
+    <i class="fa-solid fa-city"></i>
+    <p>Cities</p>
+    <div class="line"></div>
+  </div>
+  <div class="filter">
+    <i class="fa-brands fa-fort-awesome"></i>
+    <p>Castles</p>
+    <div class="line"></div>
+  </div>
+  <div class="filter">
+    <i class="fa-solid fa-utensils"></i>
+    <p>FoodPlaces</p>
+    <div class="line"></div>
+  </div>
+  <div class="filter">
+    <i class="fa-solid fa-landmark-dome"></i>
+    <p>Historical</p>
+    <div class="line"></div>
+  </div>
+  <div class="filter">
+    <i class="fa-solid fa-snowflake"></i>
+    <p>Snow lands</p>
+    <div class="line"></div>
+  </div>
+  <div class="filter">
+    <i class="fa-solid fa-tents"></i>
+    <p>Camping</p>
+    <div class="line"></div>
+  </div>
+</div>
+<div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
   <% for(listing of allListings) { %>
   <a class="listing-link" href="/listings/<%=listing._id %>">
     <div class="card listing-card">

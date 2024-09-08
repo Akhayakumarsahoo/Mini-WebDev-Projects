@@ -1,5 +1,10 @@
 <% layout("layouts/boilerplate") %>
 
+<script>
+  let mapToken = "<%= process.env.MAP_TOKEN %>";
+  let listing = <%-JSON.stringify(listing)%>;
+</script>
+
 <div class="row mt-1">
   <div class="col-8 offset-3">
     <h3><b> <%=listing.title%> </b></h3>
@@ -35,8 +40,8 @@
       </form>
     </div>
   </div>
-  <% } %>
   <hr />
+  <% } %>
   <div class="review col-8 offset-2">
     <% if(currUser) {%>
     <h4><strong>Leave a Review</strong></h4>
@@ -83,9 +88,9 @@
     </form>
     <hr />
     <% } %>
-    <h4><strong>All Reviews</strong></h4>
     <div class="row">
       <% for(review of listing.reviews){ %>
+      <h4><strong>All Reviews</strong></h4>
       <div class="card review-card col-5 ms-3 mb-3">
         <div class="card-body mb-2">
           <h5 class="card-title">@<%=review.author.username %></h5>
@@ -104,5 +109,11 @@
       <% } %>
     </div>
   </div>
-  .
+  <hr />
+  <div class="col-8 offset-2">
+    <h3>Where you'll be</h3>
+    <div id="map"></div>
+  </div>
 </div>
+
+<script src="/js/map.js"></script>

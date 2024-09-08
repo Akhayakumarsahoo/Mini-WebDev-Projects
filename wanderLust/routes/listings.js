@@ -8,15 +8,12 @@ const multer = require("multer");
 const { storage } = require("../cloudConfig.js");
 const upload = multer({ storage });
 
-router
-  .route("/")
-  .get(wrapAsync(listingController.index))
-  .post(
-    isloggedIn,
-    validateListing,
-    upload.single("listing[image]"),
-    wrapAsync(listingController.createListing)
-  );
+router.route("/").get(wrapAsync(listingController.index)).post(
+  isloggedIn,
+  upload.single("listing[image]"), // <-- multer processes the form data first
+  validateListing, // <-- now validateListing can access req.body.listing
+  wrapAsync(listingController.createListing)
+);
 
 router.get("/new", isloggedIn, wrapAsync(listingController.renderNewForm));
 
@@ -26,6 +23,7 @@ router
   .put(
     isloggedIn,
     isOwner,
+    upload.single("listing[image]"),
     validateListing,
     wrapAsync(listingController.updateListing)
   )
